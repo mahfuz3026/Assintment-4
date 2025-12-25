@@ -138,6 +138,10 @@
     border-radius: 4px;
 }
 
+.modalCard {
+    padding: 20px;
+}
+
 .footer-color {
     background: #3f4752;
     color: #ddd;
