@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    height: 80px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 45px;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 380px;
+    background: url("images/hero.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: url("images/page-title.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* SEARCH SECTION */
+.search-section {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    width: 500px;
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    outline: none;
+}
+
+.search-box button {
+    border: none;
+    background: #f4b41a;
+    color: #fff;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+/* RECIPES */
+.recipes {
+    padding: 50px 7%;
+    background: #f9f9f9;
+}
+
+.recipes h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+/* ONE ROW – 4 CARDS */
+.recipe-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h3 {
+    margin-bottom: 6px;
+}
+
+.card-body p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card-body a {
+    background: #f4b41a;
+    color: #fff;
+    padding: 8px 14px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.footer-color {
+    background: #3f4752;
+    color: #ddd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .recipe-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .recipe-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    margin: 0 10%;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f4b41a;
+}
+
+
+/* ============================= */
+/* MOBILE (<=576px) */
+/* ============================= */
+@media (max-width: 576px) {
+
+    /* HERO */
+    .hero {
+        height: 300px;
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    /* SEARCH */
+    .search-box {
+        width: 90%;
+    }
+
+    /* RECIPES */
+    .recipes {
+        padding: 40px 5%;
+    }
+
+    /* .recipe-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+    } */
+
+    .card-alin {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .card img {
+        height: 160px;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+/* ============================= */
+/* TABLET (<=768px) */
+/* ============================= */
+@media (max-width: 768px) {
+
+    .hero {
+        height: 340px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .search-box {
+        width: 80%;
+    }
+
+    .recipe-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================= */
+/* SMALL DESKTOP (<=992px) */
+/* ============================= */
+@media (max-width: 992px) {
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .recipe-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================= */
+/* LARGE DESKTOP (>=1200px) */
+/* ============================= */
+@media (min-width: 1200px) {
+
+    body {
+        max-width: 1600px;
+        margin: auto;
+    }
+
+    .hero {
+        height: 420px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .recipes {
+        padding: 70px 10%;
+    }
+}
+
+/* ============================= */
+/* MOBILE (<=576px) */
+/* ============================= */
+@media (max-width: 576px) {
+
+    /* HERO */
+    .hero {
+        height: 300px;
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    /* SEARCH */
+    .search-box {
+        width: 90%;
+    }
+
+    /* RECIPES */
+    .recipes {
+        padding: 40px 5%;
+    }
+
+    .recipe-row {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 160px;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+/* ============================= */
+/* TABLET (<=768px) */
+/* ============================= */
+@media (max-width: 768px) {
+
+    .hero {
+        height: 340px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .search-box {
+        width: 80%;
+    }
+
+    .recipe-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================= */
+/* SMALL DESKTOP (<=992px) */
+/* ============================= */
+@media (max-width: 992px) {
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .recipe-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================= */
+/* LARGE DESKTOP (>=1200px) */
+/* ============================= */
+@media (min-width: 1200px) {
+
+    body {
+        max-width: 1600px;
+        margin: auto;
+    }
+
+    .hero {
+        height: 420px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .recipes {
+        padding: 70px 10%;
+    }
+}
+
+
+/* ============================= */
+/* MOBILE (<=576px) */
+/* ============================= */
+@media (max-width: 576px) {
+
+    /* HERO */
+    .hero {
+        height: 300px;
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    /* SEARCH */
+    .search-box {
+        width: 90%;
+    }
+
+    /* RECIPES */
+    .recipes {
+        padding: 40px 5%;
+    }
+
+    .recipe-row {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 160px;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+/* ============================= */
+/* TABLET (<=768px) */
+/* ============================= */
+@media (max-width: 768px) {
+
+    .hero {
+        height: 340px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .search-box {
+        width: 80%;
+    }
+
+    .recipe-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================= */
+/* SMALL DESKTOP (<=992px) */
+/* ============================= */
+@media (max-width: 992px) {
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .recipe-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================= */
+/* LARGE DESKTOP (>=1200px) */
+/* ============================= */
+@media (min-width: 1200px) {
+
+    body {
+        max-width: 1600px;
+        margin: auto;
+    }
+
+    .hero {
+        height: 420px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .recipes {
+        padding: 70px 10%;
+    }
+}
