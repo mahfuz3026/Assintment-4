@@ -11,7 +11,7 @@ async function loadMeals(searchText = "") {
   mealContainer.innerHTML = `
     <div class="grid items-center col-span-4 justify-center min-h-screen">
       <div class="flex flex-col items-center gap-3">
-        <div class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        <div class="w-12 h-12 border-4 border-[#f4b41a] border-t-transparent rounded-full animate-spin"></div>
         <p class="text-gray-600 font-medium">Loading...</p>
       </div>
     </div>
